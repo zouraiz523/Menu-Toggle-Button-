@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    background:  #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bars {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;}
+  .bar {
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    background:linear-gradient(90deg, #88598f, #0f46c6);
+    border-radius: 4px;
+    transition: 0.5s;
+  }
+  .bar-1 {
+    transform: translateY(-25px);
+    width: 50%;
+    left: 15px;
+  }
+  .bar-3 {
+    transform: translateY(25px);
+    width: 30%;
+    left: 15px;
+  }
+  
+  .bars.active .bar-1 {
+    width: 70px;
+    transform: translateY(0px) rotate(45deg);
+  }
+  .bars.active .bar-2 {
+    transform: translateX(100px);
+  }
+  .bars.active .bar-3 {
+    width: 70px;
+    transform: translateY(0px) rotate(315deg);
+  }
+  
